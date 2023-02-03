@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en"xmlns:th="http://www.thymleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>Movie Rating Analysis</title>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+</head>
+<body>
+<div  class= "container">
+  <h1> Movie Rating Analysis</h1>
+  <hr>
+  <h2>Save Movie</h2>
+
+<form action="#" th:action="@{/saveMovie}" th:object ="${movie}" 
+method = "POST">
+<input type="text" th:field="*{MovieName}"
+ placeholder="Movie MovieName" class="form-control mb-4 col-4">
+ 
+ <input type="text" th:field="*{MovieName}"
+ placeholder="Movie MovieGenre" class="form-control mb-4 col-4">
+ 
+ 
+ 
+ 
+<button type="submit" class="btn btn-info col-2"> Save Movie</button>
+</form>
+<hr>
+<a th:href = "@{/}">Back to Movie List</a>
+</div>
+</body>
+</html>
